@@ -1,17 +1,10 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" dir="rtl">
+<html lang="he" dir="rtl">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="csrf-token" content="{{ csrf_token() }}" />
 
-    <noscript>
-      <img
-        height="1"
-        width="1"
-        src="https://www.facebook.com/tr?id=574908326830910&ev=PageView
-        &noscript=1" />
-    </noscript>
     <!-- End Facebook Pixel Code -->
     <title>Noviks - נוביקס | קטלוג מוצרים</title>
     <meta name="description" content="קטלוג מוצרים של נוביקס" />
@@ -23,42 +16,37 @@
     <meta property="og:image:type" content="image/jpg" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Noviks - נוביקס | קטלוג מוצרים" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
 
     <link href="output.css" rel="stylesheet" />
-
-    <script type="module" src="./assets/app.js" defer></script>
   </head>
 
-  <!-- Header -->
-  <header class="bg-no-repeat bg-center bg-cover" style="background-image: url('./assets/images/hero.png')">
-    <div class="w-screen h-[475px] lg:h-[800px] relative">
-      <div class="absolute top-20 lg:top-32 left-1/2 transform -translate-x-1/2 flex gap-16">
-        <img class="w-28 lg:w-40 h-auto" src="./assets/images/novikslogo.png" alt="" />
-        <div class="hidden lg:flex flex-col self-end">
-          <h2 class="section-title font-ass-bold">נעים להכיר,</h2>
-          <h2 class="section-title font-ass-bold">אנחנו נוביקס</h2>
-          <p class="section-subtitle max-w-[336px]">
-            ואנחנו מאמינים שכדאי לכל בית בישראל להכיר את סגולות צמחי המרפא המקומיים
-          </p>
+  <body class="relative" x-data="noviks()">
+    <!-- Header -->
+    <header class="bg-no-repeat bg-center bg-cover" style="background-image: url('./assets/images/hero.png')">
+      <div class="w-screen h-[475px] lg:h-[800px] relative">
+        <div class="absolute top-20 lg:top-32 left-1/2 transform -translate-x-1/2 flex gap-16">
+          <img class="w-28 lg:w-40 h-auto" src="./assets/images/novikslogo.png" alt="" />
+          <div class="hidden lg:flex flex-col self-end">
+            <h2 class="section-title font-ass-bold">נעים להכיר,</h2>
+            <h2 class="section-title font-ass-bold">אנחנו נוביקס</h2>
+            <p class="section-subtitle max-w-[336px]">
+              ואנחנו מאמינים שכדאי לכל בית בישראל להכיר את סגולות צמחי המרפא המקומיים
+            </p>
+          </div>
         </div>
       </div>
+    </header>
+    <div class="noviks-container container mx-auto py-10 flex lg:hidden flex-col self-end">
+      <h2 class="section-title font-ass-bold">נעים להכיר,</h2>
+      <h2 class="section-title font-ass-bold">אנחנו נוביקס</h2>
+      <p class="section-subtitle max-w-[336px]">
+        ואנחנו מאמינים שכדאי לכל בית בישראל להכיר את סגולות צמחי המרפא המקומיים
+      </p>
     </div>
-  </header>
-  <div class="noviks-container container mx-auto py-10 flex lg:hidden flex-col self-end">
-    <h2 class="section-title font-ass-bold">נעים להכיר,</h2>
-    <h2 class="section-title font-ass-bold">אנחנו נוביקס</h2>
-    <p class="section-subtitle max-w-[336px]">
-      ואנחנו מאמינים שכדאי לכל בית בישראל להכיר את סגולות צמחי המרפא המקומיים
-    </p>
-  </div>
-  <!-- Header End-->
-
-  <body class="relative" x-data="noviks()">
+    <!-- Header End-->
     <!-- Section #1 -->
     <section class="bg-[#D9D7C1] max-lg:bg-opacity-20 lg:p-20">
       <div class="noviks-container container max-lg:py-10 flex flex-col justify-center items-center gap-20">
