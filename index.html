@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
+
+    <noscript>
+      <img
+        height="1"
+        width="1"
+        src="https://www.facebook.com/tr?id=574908326830910&ev=PageView
+        &noscript=1" />
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+    <title>Noviks - נוביקס | קטלוג מוצרים</title>
+    <meta name="description" content="קטלוג מוצרים של נוביקס" />
+    <meta property="og:image" content="./assets/images/favicon.png" />
+    <!-- add favico -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon.png" />
+    <link rel="icon" type="image/png" href="./assets/images/favicon.png" />
+
+    <meta property="og:image:type" content="image/jpg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Noviks - נוביקס | קטלוג מוצרים" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+
+    <link href="output.css" rel="stylesheet" />
+
+    <script type="module" src="./assets/app.js" defer></script>
+  </head>
+
+  <!-- Header -->
+  <header class="bg-no-repeat bg-center bg-cover" style="background-image: url('./assets/images/hero.png')">
+    <div class="w-screen h-[475px] lg:h-[800px] relative">
+      <div class="absolute top-20 lg:top-32 left-1/2 transform -translate-x-1/2 flex gap-16">
+        <img class="w-28 lg:w-40 h-auto" src="./assets/images/novikslogo.png" alt="" />
+        <div class="hidden lg:flex flex-col self-end">
+          <h2 class="section-title font-ass-bold">נעים להכיר,</h2>
+          <h2 class="section-title font-ass-bold">אנחנו נוביקס</h2>
+          <p class="section-subtitle max-w-[336px]">
+            ואנחנו מאמינים שכדאי לכל בית בישראל להכיר את סגולות צמחי המרפא המקומיים
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="noviks-container container mx-auto py-10 flex lg:hidden flex-col self-end">
+    <h2 class="section-title font-ass-bold">נעים להכיר,</h2>
+    <h2 class="section-title font-ass-bold">אנחנו נוביקס</h2>
+    <p class="section-subtitle max-w-[336px]">
+      ואנחנו מאמינים שכדאי לכל בית בישראל להכיר את סגולות צמחי המרפא המקומיים
+    </p>
+  </div>
+  <!-- Header End-->
+
+  <body class="relative" x-data="noviks()">
+    <!-- Section #1 -->
+    <section class="bg-[#D9D7C1] max-lg:bg-opacity-20 lg:p-20">
+      <div class="noviks-container container max-lg:py-10 flex flex-col justify-center items-center gap-20">
+        <div class="flex flex-col font-ass-semi">
+          <p class="section-subtitle">
+            אנחנו מגדלים, ממצים ומייצרים מוצרים שמכילים חומרים סופר<br />
+            איכותיים, טבעיים ונקיים מחומרים מזיקים - מהשתיל לבקבוק.
+          </p>
+
+          <p class="section-subtitle text-center">המוצרים שלנו:</p>
+        </div>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+          <template x-for="item in icons" :key="item.title">
+            <div class="flex flex-col items-center text-center">
+              <img :src="item.imagePath" alt="" class="h-16 w-16 object-contain" />
+              <p x-text="item.title" class="mt-2 text-[23px] font-bold"></p>
+            </div>
+          </template>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section #2 -->
+    <section class="max-lg:px-7 py-10 lg:p-20">
+      <div class="flex flex-col gap-10 justify-center items-center">
+        <p class="text-[25px] max-lg:font-semibold lg:section-subtitle text-center lg:max-w-[1125px]">
+          הצמחים העיקריים בהם אנחנו משתמשים הם לבנדר ואזוב אותם אנחנו מגדלים בגולן, במושב שעל. אלה שני צמחי מרפא
+          עוצמתיים שיודעים לתת מענה למגוון רחב מאוד של בעיות.
+        </p>
+
+        <div class="flex max-lg:flex-col gap-16">
+          <!-- Lavender Card -->
+          <div class="relative flex flex-col gap-5">
+            <!-- Mobile SVG -->
+            <svg
+              class="block lg:hidden absolute top-0 -translate-y-1/4 -translate-x-4"
+              xmlns="http://www.w3.org/2000/svg"
+              width="151.726"
+              height="150.634"
+              data-name="Group 21">
+              <defs>
+                <clipPath id="a">
+                  <path fill="#9b9bb5" d="M0 0h151.726v150.634H0z" data-name="Rectangle 10" />
+                </clipPath>
+              </defs>
+              <g clip-path="url(#a)" data-name="Group 20">
+                <path
+                  fill="#9b9bb5"
+                  d="M145.427 45.961a75.139 75.139 0 0 0-8.338-20.372C122.412 1 91.707-4.139 65.744 2.887a11.643 11.643 0 0 0-3.5 1.571A83.911 83.911 0 0 0 21.611 28.88C5.325 43.26-4.648 62.685 2.178 86.464c4.564 15.9 15.064 34.454 28.721 44.229a53.153 53.153 0 0 0 4.6 2.906 68.758 68.758 0 0 0 38.55 16.685 72.293 72.293 0 0 0 41.257-8.3c11.767-6.283 21.956-15.747 28.263-27.574 10.356-19.41 10.711-46.639 1.858-68.449"
+                  data-name="Path 71" />
+              </g>
+
+              <text
+                x="50%"
+                y="50%"
+                text-anchor="middle"
+                dominant-baseline="middle"
+                font-weight="bold"
+                font-size="30"
+                fill="#fff">
+                הלבנדר
+              </text>
+            </svg>
+            <img
+              class="w-[588px] h-[244px] lg:h-[342px] object-cover object-center"
+              src="./assets/images/azuv-img.png"
+              alt="" />
+            <div class="flex justify-between lg:px-[30px]">
+              <svg
+                class="hidden lg:block -translate-y-[80%]"
+                xmlns="http://www.w3.org/2000/svg"
+                width="151.726"
+                height="150.634"
+                data-name="Group 21">
+                <defs>
+                  <clipPath id="a">
+                    <path fill="#9b9bb5" d="M0 0h151.726v150.634H0z" data-name="Rectangle 10" />
+                  </clipPath>
+                </defs>
+                <g clip-path="url(#a)" data-name="Group 20">
+                  <path
+                    fill="#9b9bb5"
+                    d="M145.427 45.961a75.139 75.139 0 0 0-8.338-20.372C122.412 1 91.707-4.139 65.744 2.887a11.643 11.643 0 0 0-3.5 1.571A83.911 83.911 0 0 0 21.611 28.88C5.325 43.26-4.648 62.685 2.178 86.464c4.564 15.9 15.064 34.454 28.721 44.229a53.153 53.153 0 0 0 4.6 2.906 68.758 68.758 0 0 0 38.55 16.685 72.293 72.293 0 0 0 41.257-8.3c11.767-6.283 21.956-15.747 28.263-27.574 10.356-19.41 10.711-46.639 1.858-68.449"
+                    data-name="Path 71" />
+                </g>
+
+                <text
+                  x="50%"
+                  y="50%"
+                  text-anchor="middle"
+                  dominant-baseline="middle"
+                  font-weight="bold"
+                  font-size="30"
+                  fill="#fff">
+                  הלבנדר
+                </text>
+              </svg>
+              <p class="lg:max-w-[370px] text-[23px] max-lg:font-semibold lg:running-text leading-7">
+                בעל תכונות שמרגיעות את הנפש וגם את הגוף ולכן נמצא בשימוש רחב בתחום העזרה הראשונה
+              </p>
+            </div>
+          </div>
+
+          <!-- Azov Card -->
+          <div class="relative flex flex-col gap-5">
+            <svg
+              class="block lg:hidden absolute top-0 -translate-y-1/4 -translate-x-4"
+              xmlns="http://www.w3.org/2000/svg"
+              width="151.726"
+              height="150.634"
+              data-name="Group 21">
+              <defs>
+                <clipPath id="a">
+                  <path fill="#97AE9B" d="M0 0h151.726v150.634H0z" data-name="Rectangle 10" />
+                </clipPath>
+              </defs>
+              <g clip-path="url(#a)" data-name="Group 20">
+                <path
+                  fill="#97AE9B"
+                  d="M145.427 45.961a75.139 75.139 0 0 0-8.338-20.372C122.412 1 91.707-4.139 65.744 2.887a11.643 11.643 0 0 0-3.5 1.571A83.911 83.911 0 0 0 21.611 28.88C5.325 43.26-4.648 62.685 2.178 86.464c4.564 15.9 15.064 34.454 28.721 44.229a53.153 53.153 0 0 0 4.6 2.906 68.758 68.758 0 0 0 38.55 16.685 72.293 72.293 0 0 0 41.257-8.3c11.767-6.283 21.956-15.747 28.263-27.574 10.356-19.41 10.711-46.639 1.858-68.449"
+                  data-name="Path 71" />
+              </g>
+
+              <text
+                x="50%"
+                y="50%"
+                text-anchor="middle"
+                dominant-baseline="middle"
+                font-weight="bold"
+                font-size="30"
+                fill="#fff">
+                אזוב
+              </text>
+            </svg>
+            <img
+              class="w-[588px] h-[244px] lg:h-[342px] object-cover object-center"
+              src="./assets/images/lavander-img.png"
+              alt="" />
+            <div class="flex justify-between lg:px-[30px]">
+              <svg
+                class="hidden lg:block -translate-y-[80%]"
+                xmlns="http://www.w3.org/2000/svg"
+                width="151.726"
+                height="150.634"
+                data-name="Group 21">
+                <defs>
+                  <clipPath id="a">
+                    <path fill="#97AE9B" d="M0 0h151.726v150.634H0z" data-name="Rectangle 10" />
+                  </clipPath>
+                </defs>
+                <g clip-path="url(#a)" data-name="Group 20">
+                  <path
+                    fill="#97AE9B"
+                    d="M145.427 45.961a75.139 75.139 0 0 0-8.338-20.372C122.412 1 91.707-4.139 65.744 2.887a11.643 11.643 0 0 0-3.5 1.571A83.911 83.911 0 0 0 21.611 28.88C5.325 43.26-4.648 62.685 2.178 86.464c4.564 15.9 15.064 34.454 28.721 44.229a53.153 53.153 0 0 0 4.6 2.906 68.758 68.758 0 0 0 38.55 16.685 72.293 72.293 0 0 0 41.257-8.3c11.767-6.283 21.956-15.747 28.263-27.574 10.356-19.41 10.711-46.639 1.858-68.449"
+                    data-name="Path 71" />
+                </g>
+
+                <text
+                  x="50%"
+                  y="50%"
+                  text-anchor="middle"
+                  dominant-baseline="middle"
+                  font-weight="bold"
+                  font-size="30"
+                  fill="#fff">
+                  הלבנדר
+                </text>
+              </svg>
+              <p class="lg:max-w-[370px] text-[23px] max-lg:font-semibold lg:running-text leading-7">
+                בעל תכונות אנטיספטיות מאוד חזקות. יש בו חומרים פעילים שיודעים לעבוד מול זיהומים של חיידקים, וירוסים,
+                טפילים ופטריות. הוא מאזן את מערכת הנשימה, מערכת העיכול והעור
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Sentence with a background -->
+        <div
+          class="flex justify-center items-center bg-cover bg-[position:25%_75%] lg:bg-center w-screen h-[344px] lg:h-[800px] max-lg:mt-32"
+          style="background-image: url('./assets/images/section-2-bg.png')">
+          <div
+            class="max-lg:text-center text-[25px] lg:text-[40px] font-bold p-5 lg:p-8 leading-8 bg-light-azov max-w-[350px] lg:max-w-[400px] lg:translate-x-[80%] -translate-y-48 lg:-translate-y-1/4">
+            המוצרים שלנו נותנים מענה למגוון רחב של בעיות ובעלי שימושים רבים לכל בית
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section #3 -->
+    <section class="mb-20">
+      <div class="mx-auto lg:container flex flex-col items-center lg:!max-w-[1227px] w-full">
+        <h3
+          class="max-lg:mx-7 w-full bg-light-azov py-3 lg:p-5 mb-5 text-[30px] lg:section-title text-center font-bold max-lg:mb-32">
+          בואו נכיר אותם
+        </h3>
+
+        <div
+          class="relative max-lg:flex max-lg:flex-col max-lg:gap-16 lg:grid lg:grid-cols-2 section-bg bg-cover bg-center w-full h-[800px]">
+          <!-- Grid item #1 -->
+          <div class="max-lg:px-7 flex flex-col gap-2 lg:p-28">
+            <h4 class="section-subtitle font-bold bg-azov text-white py-2 px-5 w-fit">קרם אזוב</h4>
+            <p class="text-[23px] leading-6 lg:running-text max-w-[444px]">
+              צמח האזוב ידוע בסגולותיו העוצמתיות בחיטוי. הוא אנטיבקטריאלי, אנטי דלקתי, אנטיפטרייתי ואנטי ויראלי. בזכות
+              תכונות אלה הוא עשוי לסייע במצבים של זיהומים ודלקות פנימיות או מקומיות
+            </p>
+          </div>
+          <!-- Grid item #2 -->
+          <div class="max-lg:px-7 flex flex-col gap-2 lg:p-28">
+            <h4 class="section-subtitle font-bold bg-levander text-white py-2 px-5 w-fit">קרם לבנדר קלנדולה</h4>
+            <p class="text-[23px] leading-6 lg:running-text max-w-[444px]">
+              קרם הפלא שתרצו לקחת איתכם לכל מקום. עשוי לסייע בהמון מצבים כמו: כוויות, עקיצות, חתכים, גירויים, יובש, עור
+              פצוע ועוד
+            </p>
+          </div>
+
+          <!-- Sentence at the bottom -->
+          <div class="absolute bottom-0 w-full">
+            <p class="text-xl lg:running-text text-center p-6 lg:p-12">
+              שני הקרמים האלו משלימים אחד את השני, ויחד יוצרים מעטפת טיפולית מושלמת
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <style>
+      .section-bg {
+        background-image: url("./assets/images/section-3-bg.png");
+      }
+
+      @media (max-width: 600px) {
+        .section-bg {
+          background-image: url("./assets/images/section-3-mobile.png");
+        }
+      }
+    </style>
+
+    <!-- Products -->
+
+    <section class="mb-32">
+      <div class="noviks-container container flex flex-col gap-32">
+        <template x-for="serie in series" :key="serie.title">
+          <div class="flex flex-col gap-8">
+            <!-- Series Title -->
+            <h2
+              class="section-subtitle w-fit font-bold text-white py-2 px-5"
+              :style="`background-color:${serie.color}`"
+              x-text="serie.title"></h2>
+
+            <!-- Products Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              <!-- Regular Products -->
+              <template
+                x-for="product in serie.products.filter(p => p.name && p.name.trim() !== '')"
+                :key="product.name">
+                <div class="bg-white overflow-hidden product-card">
+                  <!-- Product Image -->
+                  <div class="h-[300px] w-full mb-5">
+                    <img
+                      :src="product.imagePath"
+                      :alt="product.name"
+                      class="max-lg:h-full max-h-full max-w-full object-cover" />
+                  </div>
+
+                  <!-- Product Content -->
+                  <div class="text-right">
+                    <!-- Product Name -->
+                    <h3 class="section-subtitle font-bold" x-text="product.name"></h3>
+
+                    <!-- Product Description -->
+                    <p class="running-text mb-5" x-text="product.description"></p>
+
+                    <!-- Comment Badge -->
+                    <div x-show="product.comment">
+                      <div class="text-[25px] font-bold">
+                        <span x-text="product.comment"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </template>
+              <!-- Special Card for series with hasSpecialCard -->
+              <div
+                x-show="serie.hasSpecialCard"
+                class="relative h-[90px] lg:h-[300px] w-full flex flex-row-reverse lg:flex-col items-center justify-center lg:p-8"
+                style="@media (min-width: 600px) {background: linear-gradient(135deg, #f1f3f4 0%, #e8eaed 100%)}">
+                <svg
+                  class="lg:absolute top-0 left-0 lg:-translate-y-1/2"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="171.214"
+                  height="170.284"
+                  viewBox="0 0 171.214 170.284">
+                  <defs>
+                    <clipPath id="clip-path">
+                      <rect
+                        id="Rectangle_10"
+                        data-name="Rectangle 10"
+                        width="151.726"
+                        height="150.634"
+                        fill="#e2a7a4" />
+                    </clipPath>
+                  </defs>
+                  <g id="Group_21" data-name="Group 21" transform="translate(0 21.116) rotate(-8)">
+                    <g id="Group_20" data-name="Group 20" clip-path="url(#clip-path)">
+                      <path
+                        id="Path_71"
+                        data-name="Path 71"
+                        d="M145.427,45.961a75.139,75.139,0,0,0-8.338-20.372C122.412,1,91.707-4.139,65.744,2.887a11.643,11.643,0,0,0-3.5,1.571A83.911,83.911,0,0,0,21.611,28.88C5.325,43.26-4.648,62.685,2.178,86.464c4.564,15.9,15.064,34.454,28.721,44.229a53.153,53.153,0,0,0,4.6,2.906,68.758,68.758,0,0,0,38.55,16.685,72.293,72.293,0,0,0,41.257-8.3c11.767-6.283,21.956-15.747,28.263-27.574C153.925,95,154.28,67.771,145.427,45.961"
+                        fill="#e2a7a4" />
+                    </g>
+                    <!-- Text -->
+                    <text
+                      x="50%"
+                      y="50%"
+                      text-anchor="middle"
+                      dominant-baseline="middle"
+                      font-weight="bold"
+                      font-size="30"
+                      fill="white"
+                      font-weight="bold">
+                      חדש!
+                    </text>
+                  </g>
+                </svg>
+
+                <p class="text-[25px] lg:section-subtitle font-bold lg:max-w-[200px] leading-8">
+                  נרגשים להציג מוצרים מהסדרה החדשה שלנו
+                </p>
+              </div>
+            </div>
+          </div>
+        </template>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <img class="w-full h-full" src="./assets/images/footer-img-mobile.png" alt="" />
+    <footer class="bg-light-azov/20 lg:mt-[500px] h-[500px] lg:h-[1100px] pb-16">
+      <div class="relative noviks-container container flex flex-col items-center gap-24">
+        <!-- desktop img -->
+        <div class="hidden lg:block absolute lg:-top-96">
+          <img class="w-full h-full" src="./assets/images/footer-img.png" alt="" />
+        </div>
+        <!-- mobile img -->
+
+        <p
+          class="text-center text-[23px] lg:section-subtitle font-bold lg:pt-[500px] lg:max-w-[380px] max-lg:pt-[50px]">
+          לייעוץ והתאמה אישית התייעצו עם המוכרנים בחנות או איתנו בטלפון <a href="tel:046662800">04-6662800</a>
+        </p>
+        <img class="w-28 lg:w-40 h-auto" src="./assets/images/novikslogo.png" alt="" />
+      </div>
+    </footer>
+  </body>
+</html>
+
+<script>
+  function noviks() {
+    return {
+      icons: [
+        {
+          title: "מאושר משרד הבריאות",
+          imagePath: "./assets/images/icons/check.svg",
+        },
+
+        {
+          title: "VEGAN FRIENDLY",
+          imagePath: "./assets/images/icons/vegan.svg",
+        },
+        {
+          title: "תוצרת חקלאית כחול-לבן",
+          imagePath: "./assets/images/icons/israel.svg",
+        },
+        {
+          title: "חומרים טבעיים בריכוז גבוה",
+          imagePath: "./assets/images/icons/leaf.svg",
+        },
+      ],
+      series: [
+        {
+          title: "סדרת האזוב",
+          color: "#97AE9B",
+          hasSpecialCard: false,
+          products: [
+            {
+              name: "סירופ אזוב סמבוק",
+              description:
+                "שילוב מנצח של שני צמחים שיחד מחזקים את מערכת החיסון ומאזנים את מערכת העיכול והנשימה. הסירופ בעל טעם של זעתר מתוק והוא טעים לרוב לקוחותינו. מסייע במצבים של שיעול, צינון, ליחה, קשיים וחוסר איזון במערכת העיכול או כשפשוט צריך לחזק את המערכת החיסונית",
+              comment: "לא מתאים לסכרתיים, לשמור בקירור לאחר הפתיחה",
+              imagePath: "./assets/images/products/azov/syrup.png",
+            },
+            {
+              name: "שמן אזוב",
+              description:
+                "צמח האזוב עובד עם מנגנון דומה לזה של האנטיביוטיקה ועל כן עשוי לתת מענה דומה של חיטוי זיהומים ודלקות פנימיות או מקומיות במערכת הנשימה והעיכול כגון הליקובקטר, קנדידה, שפעת, דלקת גרון, דלקת חניכיים, הרפס ועוד. ניתן להשתמש גם במריחה חיצונית על פטריות עור/ציפורניים או זיהומי עור שונים. השמן בעל טעמים חריפים של זעתר ושמן זית. ניתן למהול במים",
+              comment: "מתאים מגיל 7 אינו מתאים לנשים בהריון/מניקות",
+              imagePath: "./assets/images/products/azov/oil.png",
+            },
+            {
+              name: "תרסיס אזוב",
+              description:
+                "מכיל הידרוסול אזוב איכותי. עשוי לסייע למצבים שונים בחלל הפה והגרון כגון אפטות, כאב גרון התחלתי או מניעה של זיהום מקומי בגרון, פטריות בלשון, פצעים בחלל הפה ועוד",
+              comment: "",
+              imagePath: "./assets/images/products/azov/spray.png",
+            },
+          ],
+        },
+        {
+          title: "סדרת הלבנדר",
+          color: "#9B9BB5",
+          hasSpecialCard: false,
+          products: [
+            {
+              name: "שמן אתרי לבנדר",
+              description:
+                "השמן שלנו הוא שמן טהור שעבר תהליכי זיקוק מסורתי אשר שומר על ערכי החומרים הפעילים בצורתם הגולמית ביותר. בזכות התכונות המרגיעות ומשחררות של צמח הלבנדר, שמן העיסוי עשוי לסייע במצבים של הרחקת יתושים, הקלה על כאבי שרירים, כאבי אוזניים, כוויות, פציעות עור למיניהן, עקיצות, חיטוי מקומי ועוד",
+              comment: "מגיע ברול-און או טפטפת",
+              imagePath: "./assets/images/products/lavander/rollon.png",
+            },
+            {
+              name: "שמן עיסוי",
+              description:
+                "שמן איכותי המכיל בסיס של תשרית פרחי לבנדר בשמן שקדים איכותי, בתוספת של שמן אתרי לבנדר טהור. השמן עשוי לסייע להרחקת יתושים, להקלה על כאבי שרירים/שרירים תפוסים או כאבים פנימיים כגון וסת, כיווצי רחם, כיווצי ביוץ ועוד. מסייע להפגת מתחים והרפיה כללית של מערכת העצבים",
+              comment: "",
+              imagePath: "./assets/images/products/lavander/shemen.png",
+            },
+            {
+              name: "סבון רחצה לבנדר",
+              description:
+                "סבון שמכיל ריכוז גבוה של חומרים פעילים מצמח הלבנדר. מכיל הידרוסול ושמן אתרי לבנדר להרגעת העור. אינו מכיל SLS, חומרים פטרוכימים, פרבאנים או חומרים שמזיקים ומחלישים את שכבת העור",
+              comment: "",
+              imagePath: "./assets/images/products/lavander/sabon.png",
+            },
+          ],
+        },
+        {
+          title: "סדרת טיפוח-טיפול",
+          color: "#E2A7A4",
+          hasSpecialCard: true,
+          products: [
+            {
+              name: "הידרוסול לבנדר",
+              description:
+                "אלה המים הארומטים הנוצרים בתהליך הזיקוק של פרחי הלבנדר. ההידרוסול מכיל חומרים פעילים מהצמח ובעל תכונות מרגיעות, מקררות, מעניק לחות וחיטוי עדין. עשוי לסייע במצבים בהם יש צורך בקרור והרגעת העור, מענה ראשוני של הרגעת עור פגוע או לשימוש קוסמטי בעור הפנים (ניקוי, הרגעה והזנה) לאפקט הרגעה מומלץ לשמור בקרור",
+              comment: "מתאים לכל סוגי העור",
+              imagePath: "./assets/images/products/lavander/rollon.png",
+            },
+            {
+              name: "סבון פנים מקציף",
+              description: "סבון עדין שלא מכיל חומרים מזיקים שפוגעים בשכבת העור. מעניק ניקוי עדין בעל תכונות מרגיעות",
+              comment: "מתאים לעור רגיל - שמנוני, פגוע, עדין ואדמומי",
+              imagePath: "./assets/images/products/lavander/shemen.png",
+            },
+            // {
+            //   name: "",
+            //   description: "",
+            //   comment: "",
+            //   imagePath: "",
+            // },
+          ],
+        },
+      ],
+    };
+  }
+</script>
