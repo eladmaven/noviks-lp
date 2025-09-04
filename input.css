@@ -4,21 +4,21 @@
 
 @font-face {
   font-family: "Assistant-Regular";
-  src: url("../assets/fonts/Assistant-Regular.ttf") format("ttf");
+  src: url("./assets/fonts/Assistant-Regular.ttf") format("ttf");
   font-style: normal;
   font-weight: 400;
 }
 
 @font-face {
   font-family: "Assistant-SemiBold";
-  src: url("../assets/fonts/Assistant-SemiBold.ttf") format("ttf");
+  src: url("./assets/fonts/Assistant-SemiBold.ttf") format("ttf");
   font-style: normal;
   font-weight: 600;
 }
 
 @font-face {
   font-family: "Assistant-Bold";
-  src: url("../assets/fonts/Assistant-Bold.ttf") format("ttf");
+  src: url("./assets/fonts/Assistant-Bold.ttf") format("ttf");
   font-style: normal;
   font-weight: 700;
 }
@@ -62,4 +62,10 @@ body {
 
 .running-text {
   @apply text-[25px] leading-7;
+}
+
+@media (min-width: 600px) {
+  .responsive-gradient {
+    background: linear-gradient(135deg, #f1f3f4 0%, #e8eaed 100%);
+  }
 }

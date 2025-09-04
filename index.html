@@ -3,8 +3,6 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="csrf-token" content="{{ csrf_token() }}" />
-
     <!-- End Facebook Pixel Code -->
     <title>Noviks - נוביקס | קטלוג מוצרים</title>
     <meta name="description" content="קטלוג מוצרים של נוביקס" />
@@ -25,7 +23,7 @@
 
   <body class="relative" x-data="noviks()">
     <!-- Header -->
-    <header class="bg-no-repeat bg-center bg-cover" style="background-image: url('./assets/images/hero.png')">
+    <header class="bg-no-repeat bg-center bg-cover" style="background-image: url('./assets/images/hero.jpeg')">
       <div class="w-screen h-[475px] lg:h-[800px] relative">
         <div class="absolute top-20 lg:top-32 left-1/2 transform -translate-x-1/2 flex gap-16">
           <img class="w-28 lg:w-40 h-auto" src="./assets/images/novikslogo.png" alt="" />
@@ -40,29 +38,29 @@
       </div>
     </header>
     <div class="noviks-container container mx-auto py-10 flex lg:hidden flex-col self-end">
-      <h2 class="section-title font-ass-bold">נעים להכיר,</h2>
-      <h2 class="section-title font-ass-bold">אנחנו נוביקס</h2>
-      <p class="section-subtitle max-w-[336px]">
+      <h2 class="text-[35px] font-ass-bold">נעים להכיר,</h2>
+      <h2 class="text-[35px] font-ass-bold">אנחנו נוביקס</h2>
+      <p class="text-[25px] leading-7 max-w-[336px]">
         ואנחנו מאמינים שכדאי לכל בית בישראל להכיר את סגולות צמחי המרפא המקומיים
       </p>
     </div>
     <!-- Header End-->
     <!-- Section #1 -->
-    <section class="bg-[#D9D7C1] max-lg:bg-opacity-20 lg:p-20">
+    <section class="bg-[#D9D7C1]/20 max-lg:bg-opacity-20 lg:p-20">
       <div class="noviks-container container max-lg:py-10 flex flex-col justify-center items-center gap-20">
-        <div class="flex flex-col font-ass-semi">
-          <p class="section-subtitle">
-            אנחנו מגדלים, ממצים ומייצרים מוצרים שמכילים חומרים סופר<br />
-            איכותיים, טבעיים ונקיים מחומרים מזיקים - מהשתיל לבקבוק.
+        <div class="flex flex-col font-ass-semi leading-7">
+          <p class="text-[25px] lg:section-subtitle lg:text-center max-w-[750px]">
+            אנחנו מגדלים, ממצים ומייצרים מוצרים שמכילים חומרים סופר איכותיים, טבעיים ונקיים מחומרים מזיקים - מהשתיל
+            לבקבוק.
           </p>
 
-          <p class="section-subtitle text-center">המוצרים שלנו:</p>
+          <p class="text-[25px] lg:section-subtitle lg:text-center">המוצרים שלנו:</p>
         </div>
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
           <template x-for="item in icons" :key="item.title">
             <div class="flex flex-col items-center text-center">
               <img :src="item.imagePath" alt="" class="h-16 w-16 object-contain" />
-              <p x-text="item.title" class="mt-2 text-[23px] font-bold"></p>
+              <p x-text="item.title" class="mt-2 text-[23px] font-semibold max-w-48 leading-7"></p>
             </div>
           </template>
         </div>
@@ -72,7 +70,7 @@
     <!-- Section #2 -->
     <section class="max-lg:px-7 py-10 lg:p-20">
       <div class="flex flex-col gap-10 justify-center items-center">
-        <p class="text-[25px] max-lg:font-semibold lg:section-subtitle text-center lg:max-w-[1125px]">
+        <p class="text-[25px] max-lg:font-semibold lg:section-subtitle lg:text-center leading-7 lg:max-w-[1125px]">
           הצמחים העיקריים בהם אנחנו משתמשים הם לבנדר ואזוב אותם אנחנו מגדלים בגולן, במושב שעל. אלה שני צמחי מרפא
           עוצמתיים שיודעים לתת מענה למגוון רחב מאוד של בעיות.
         </p>
@@ -112,7 +110,7 @@
             </svg>
             <img
               class="w-[588px] h-[244px] lg:h-[342px] object-cover object-center"
-              src="./assets/images/azuv-img.png"
+              src="./assets/images/azuv-img.jpeg"
               alt="" />
             <div class="flex justify-between lg:px-[30px]">
               <svg
@@ -183,7 +181,7 @@
             </svg>
             <img
               class="w-[588px] h-[244px] lg:h-[342px] object-cover object-center"
-              src="./assets/images/lavander-img.png"
+              src="./assets/images/lavander-img.jpeg"
               alt="" />
             <div class="flex justify-between lg:px-[30px]">
               <svg
@@ -212,7 +210,7 @@
                   font-weight="bold"
                   font-size="30"
                   fill="#fff">
-                  הלבנדר
+                  האזוב
                 </text>
               </svg>
               <p class="lg:max-w-[370px] text-[23px] max-lg:font-semibold lg:running-text leading-7">
@@ -225,7 +223,7 @@
         <!-- Sentence with a background -->
         <div
           class="flex justify-center items-center bg-cover bg-[position:25%_75%] lg:bg-center w-screen h-[344px] lg:h-[800px] max-lg:mt-32"
-          style="background-image: url('./assets/images/section-2-bg.png')">
+          style="background-image: url('./assets/images/section-2-bg.jpeg')">
           <div
             class="max-lg:text-center text-[25px] lg:text-[40px] font-bold p-5 lg:p-8 leading-8 bg-light-azov max-w-[350px] lg:max-w-[400px] lg:translate-x-[80%] -translate-y-48 lg:-translate-y-1/4">
             המוצרים שלנו נותנים מענה למגוון רחב של בעיות ובעלי שימושים רבים לכל בית
@@ -237,13 +235,15 @@
     <!-- Section #3 -->
     <section class="mb-20">
       <div class="mx-auto lg:container flex flex-col items-center lg:!max-w-[1227px] w-full">
-        <h3
-          class="max-lg:mx-7 w-full bg-light-azov py-3 lg:p-5 mb-5 text-[30px] lg:section-title text-center font-bold max-lg:mb-32">
-          בואו נכיר אותם
-        </h3>
+        <div class="w-3/4 lg:w-full">
+          <h3
+            class="w-full bg-light-azov px-5 py-3 lg:p-5 mb-5 text-[30px] lg:section-title text-center font-bold max-lg:mb-20">
+            בואו נכיר אותם
+          </h3>
+        </div>
 
         <div
-          class="relative max-lg:flex max-lg:flex-col max-lg:gap-16 lg:grid lg:grid-cols-2 section-bg bg-cover bg-center w-full h-[800px]">
+          class="relative max-lg:flex max-lg:flex-col max-lg:gap-12 lg:grid lg:grid-cols-2 section-bg bg-cover bg-center w-full h-[700px]">
           <!-- Grid item #1 -->
           <div class="max-lg:px-7 flex flex-col gap-2 lg:p-28">
             <h4 class="section-subtitle font-bold bg-azov text-white py-2 px-5 w-fit">קרם אזוב</h4>
@@ -273,7 +273,7 @@
 
     <style>
       .section-bg {
-        background-image: url("./assets/images/section-3-bg.png");
+        background-image: url("./assets/images/section-3-bg.jpeg");
       }
 
       @media (max-width: 600px) {
@@ -285,7 +285,7 @@
 
     <!-- Products -->
 
-    <section class="mb-32">
+    <section class="mb-10 lg:mb-32">
       <div class="noviks-container container flex flex-col gap-32">
         <template x-for="serie in series" :key="serie.title">
           <div class="flex flex-col gap-8">
@@ -298,6 +298,54 @@
             <!-- Products Grid -->
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
               <!-- Regular Products -->
+              <!-- Special Card for series with hasSpecialCard  Desktop-->
+              <div
+                x-show="serie.hasSpecialCard"
+                class="lg:hidden flex responsive-gradient relative h-[90px] lg:h-[300px] w-full flex-row-reverse lg:flex-col items-center justify-center lg:p-8">
+                <svg
+                  class="lg:absolute top-0 left-0 lg:-translate-y-1/2"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="171.214"
+                  height="170.284"
+                  viewBox="0 0 171.214 170.284">
+                  <defs>
+                    <clipPath id="clip-path">
+                      <rect
+                        id="Rectangle_10"
+                        data-name="Rectangle 10"
+                        width="151.726"
+                        height="150.634"
+                        fill="#e2a7a4" />
+                    </clipPath>
+                  </defs>
+                  <g id="Group_21" data-name="Group 21" transform="translate(0 21.116) rotate(-8)">
+                    <g id="Group_20" data-name="Group 20" clip-path="url(#clip-path)">
+                      <path
+                        id="Path_71"
+                        data-name="Path 71"
+                        d="M145.427,45.961a75.139,75.139,0,0,0-8.338-20.372C122.412,1,91.707-4.139,65.744,2.887a11.643,11.643,0,0,0-3.5,1.571A83.911,83.911,0,0,0,21.611,28.88C5.325,43.26-4.648,62.685,2.178,86.464c4.564,15.9,15.064,34.454,28.721,44.229a53.153,53.153,0,0,0,4.6,2.906,68.758,68.758,0,0,0,38.55,16.685,72.293,72.293,0,0,0,41.257-8.3c11.767-6.283,21.956-15.747,28.263-27.574C153.925,95,154.28,67.771,145.427,45.961"
+                        fill="#e2a7a4" />
+                    </g>
+                    <!-- Text -->
+                    <text
+                      x="50%"
+                      y="50%"
+                      text-anchor="middle"
+                      dominant-baseline="middle"
+                      font-weight="bold"
+                      font-size="30"
+                      fill="white"
+                      font-weight="bold">
+                      חדש!
+                    </text>
+                  </g>
+                </svg>
+
+                <p class="text-[25px] lg:section-subtitle font-bold max-w-[200px] leading-8">
+                  נרגשים להציג מוצרים מהסדרה החדשה שלנו
+                </p>
+              </div>
               <template
                 x-for="product in serie.products.filter(p => p.name && p.name.trim() !== '')"
                 :key="product.name">
@@ -327,11 +375,10 @@
                   </div>
                 </div>
               </template>
-              <!-- Special Card for series with hasSpecialCard -->
+              <!-- Special Card for series with hasSpecialCard  Desktop-->
               <div
                 x-show="serie.hasSpecialCard"
-                class="relative h-[90px] lg:h-[300px] w-full flex flex-row-reverse lg:flex-col items-center justify-center lg:p-8"
-                style="@media (min-width: 600px) {background: linear-gradient(135deg, #f1f3f4 0%, #e8eaed 100%)}">
+                class="hidden lg:flex responsive-gradient relative h-[90px] lg:h-[300px] w-full flex-row-reverse lg:flex-col items-center justify-center lg:p-8">
                 <svg
                   class="lg:absolute top-0 left-0 lg:-translate-y-1/2"
                   xmlns="http://www.w3.org/2000/svg"
@@ -384,16 +431,16 @@
 
     <!-- Footer -->
     <!-- mobile img -->
-    <img class="w-full h-full block lg:hidden" src="./assets/images/footer-img-mobile.png" alt="" />
+    <img class="w-full h-full block lg:hidden" src="./assets/images/footer-img-mobile.jpeg" alt="" />
     <footer class="bg-light-azov/20 lg:mt-[500px] h-[500px] lg:h-[1100px] pb-16">
       <div class="relative noviks-container container flex flex-col items-center gap-24">
         <!-- desktop img -->
         <div class="hidden lg:block absolute lg:-top-96">
-          <img class="w-full h-full" src="./assets/images/footer-img.png" alt="" />
+          <img class="w-full h-full" src="./assets/images/footer-img.jpeg" alt="" />
         </div>
 
         <p
-          class="text-center text-[23px] lg:section-subtitle font-bold lg:pt-[500px] lg:max-w-[380px] max-lg:pt-[50px]">
+          class="text-center text-[23px] lg:section-subtitle font-bold lg:pt-[500px] lg:max-w-[450px] max-lg:pt-[50px]">
           לייעוץ והתאמה אישית התייעצו עם המוכרנים בחנות או איתנו בטלפון <a href="tel:046662800">04-6662800</a>
         </p>
         <img class="w-28 lg:w-40 h-auto" src="./assets/images/novikslogo.png" alt="" />
@@ -491,13 +538,13 @@
               description:
                 "אלה המים הארומטים הנוצרים בתהליך הזיקוק של פרחי הלבנדר. ההידרוסול מכיל חומרים פעילים מהצמח ובעל תכונות מרגיעות, מקררות, מעניק לחות וחיטוי עדין. עשוי לסייע במצבים בהם יש צורך בקרור והרגעת העור, מענה ראשוני של הרגעת עור פגוע או לשימוש קוסמטי בעור הפנים (ניקוי, הרגעה והזנה) לאפקט הרגעה מומלץ לשמור בקרור",
               comment: "מתאים לכל סוגי העור",
-              imagePath: "./assets/images/products/lavander/rollon.png",
+              imagePath: "./assets/images/products/care/hydrosol.png",
             },
             {
               name: "סבון פנים מקציף",
               description: "סבון עדין שלא מכיל חומרים מזיקים שפוגעים בשכבת העור. מעניק ניקוי עדין בעל תכונות מרגיעות",
               comment: "מתאים לעור רגיל - שמנוני, פגוע, עדין ואדמומי",
-              imagePath: "./assets/images/products/lavander/shemen.png",
+              imagePath: "./assets/images/products/care/sabinpanim.png",
             },
             // {
             //   name: "",
